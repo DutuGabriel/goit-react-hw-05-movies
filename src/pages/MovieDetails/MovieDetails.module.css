@@ -1,0 +1,21 @@
+.details {
+  padding: 20px;
+}
+
+.details h2 {
+  margin-top: 0;
+}
+
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #0c5ffb;
+  text-decoration: none;
+}

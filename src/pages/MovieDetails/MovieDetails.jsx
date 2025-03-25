@@ -1,7 +1,7 @@
 import { useParams, useLocation, Outlet, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getMovieDetails } from '../../services/api';
-//import styles from './MovieDetails.module.css';
+import styles from './MovieDetails.module.css';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -16,25 +16,26 @@ const MovieDetails = () => {
   if (!movie) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className={styles.details}>
       <Link to={backLink}>← Back</Link>
       <h2>{movie.title}</h2>
       <p>{movie.overview}</p>
       <p>Genres: {movie.genres.map(g => g.name).join(', ')}</p>
 
       <h3>Additional Information</h3>
-      <ul>
-        <li>
+      <ul className={styles.ul}>
+        <li className={styles.li}>
           <Link to="cast" state={{ from: backLink }}>
             Cast
           </Link>
         </li>
-        <li>
+        <li className={styles.li}>
           <Link to="reviews" state={{ from: backLink }}>
             Reviews
           </Link>
         </li>
       </ul>
+
       <Outlet />
     </div>
   );
