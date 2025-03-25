@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { searchMovies } from '../../services/api';
-import styles from './Movies.module.css';
+//import styles from './Movies.module.css';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);

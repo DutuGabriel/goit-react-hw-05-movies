@@ -1,7 +1,7 @@
 import { useParams, useLocation, Outlet, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getMovieDetails } from '../../services/api';
-import styles from './MovieDetails.module.css';
+//import styles from './MovieDetails.module.css';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
